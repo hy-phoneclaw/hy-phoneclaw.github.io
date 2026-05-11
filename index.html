@@ -207,6 +207,37 @@
     .btn:hover { transform: translateY(-1px); border-color: var(--accent); background: var(--accent-soft); }
     .btn.primary:hover { background: #751d1d; color: white; }
     .btn.disabled { color: var(--faint); pointer-events: none; }
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+      text-align: left;
+    }
+    .resource-card {
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.36);
+    }
+    .resource-card strong {
+      display: block;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+    .resource-card span {
+      display: inline-flex;
+      margin-top: 10px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--faint);
+      color: var(--faint);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
 
     .hero-visual {
       max-width: 1040px;
@@ -372,6 +403,7 @@
       .nav-links { flex-wrap: wrap; gap: 12px; }
       .hero-main { padding: 18px 0; }
       .artifact-pair { grid-template-columns: 1fr; }
+      .resource-grid { grid-template-columns: 1fr; }
       .visual-caption { grid-template-columns: 1fr; }
       .mini { border-left: none; border-top: 1px solid var(--line); padding-left: 0; }
       .trace-grid { grid-template-columns: 1fr; }
@@ -411,6 +443,20 @@
         <div class="hero-actions">
           <a class="btn primary" href="assets/paper.pdf">Paper PDF</a>
           <a class="btn" href="#results">View Results</a>
+        </div>
+        <div class="resource-grid" aria-label="Project resources">
+          <div class="resource-card">
+            <strong>GitHub</strong>
+            <span>Placeholder</span>
+          </div>
+          <div class="resource-card">
+            <strong>Hugging Face Dataset</strong>
+            <span>Placeholder</span>
+          </div>
+          <div class="resource-card">
+            <strong>Hugging Face Paper</strong>
+            <span>Placeholder</span>
+          </div>
         </div>
       </div>
 
